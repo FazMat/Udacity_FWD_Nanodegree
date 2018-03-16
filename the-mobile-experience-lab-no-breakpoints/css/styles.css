@@ -13,12 +13,12 @@ p {
   margin: 0 0 1em;
 }
 .container {
-  width: 1920px;
+  width: 100%;
   margin: 0 auto;
 }
 .picture, .resume {
   position: fixed;
-  width: 960px;
+  width: 50%;
   padding: 3.125rem;
 }
 .picture {
@@ -27,7 +27,7 @@ p {
 }
 .intro {
   width: 75%;
-  margin: 55% auto 0;
+  margin: 70% auto 0;
   font-family: Montserrat, sans-serif;
   font-size: 10px;
   line-height: 1.35;
@@ -77,15 +77,47 @@ p {
   float: left;
 }
 .sidebar {
-  width: 10%;
+  width: 20%;
+  padding-right: 1em;
 }
 .main {
-  width: 90%;
-  padding-right: 25%;
+  width: 80%;
+  padding-right: 10%;
 }
 .tag {
   text-transform: uppercase;
   font-style: italic;
   font-weight: 600;
   color: rgb(43, 93, 240);
+}
+
+
+/** Responsive part */
+
+@media screen and (max-width: 1200px) {
+  .picture {
+    width: 40%;
+  }
+  .resume {
+    width: 60%;
+  }
+  .sidebar, .main {
+    float: none;
+    width: 100%;
+    padding-right: 0;
+  }
+  .intro {
+    margin: 80% auto 0;
+    position: absolute;
+    
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .picture {
+    display: none;
+  }
+  .resume {
+    width: 100%;
+  }
 }
